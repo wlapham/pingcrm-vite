@@ -1,19 +1,37 @@
-# PingCRM on Rails
+<h1 align="center">
+  <a href="https://vite-rails.netlify.app/">
+    <img src="https://raw.githubusercontent.com/ElMassimo/vite_rails/main/docs/public/logo.svg" width="120px"/>
+  </a>
 
-A demo application built with Ruby on Rails and Vue.js to illustrate how **[Inertia.js](https://inertiajs.com/)** works.
+  <br>
+
+  <a href="https://vite-rails.netlify.app/">
+    PingCRM on Vite Rails
+  </a>
+</h1>
+
+[original demo]: https://github.com/ledermann/pingcrm
+[vite rails]: https://github.com/ElMassimo/vite_rails
+[js_from_routes]: https://github.com/ElMassimo/js_from_routes
+[webpacker]: https://github.com/rails/webpacker
+[vite]: http://vitejs.dev/
+
+Unlike the [original demo], this replaces [webpacker] with [Vite Rails],
+which provides a substantially faster development experience.
+
+It also leverages [<kbd>js_from_routes</kbd>][js_from_routes] to auto-generate
+API methods to effortlessly integrate with the Rails backend.
 
 ![Screenshot](screenshot.jpg)
 
-This is a port of the [original PingCRM written in Laravel/PHP](https://github.com/inertiajs/pingcrm) to Ruby on Rails. Now it's possible to dive into the beautiful world of **Inertia.js** without having to install PHP ;-)
-
-There is a hosted installation of this demo available at https://pingcrm.ledermann.dev. Login with:
+<!-- There is a hosted installation of this demo available at https://pingcrm.ledermann.dev. Login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
 
 ## Lighthouse performance audit
 
-![Lighthouse audit](lighthouse.png)
+![Lighthouse audit](lighthouse.png) -->
 
 
 ## Installation
@@ -21,13 +39,13 @@ There is a hosted installation of this demo available at https://pingcrm.lederma
 Clone the repo locally:
 
 ```
-git clone https://github.com/ledermann/pingcrm.git
+git clone https://github.com/ElMassimo/pingcrm-vite.git
 ```
 
 Setup (install dependencies, create and seed database):
 
 ```
-cd pingcrm
+cd pingcrm-vite
 bin/setup
 ```
 
@@ -63,3 +81,4 @@ rails test:system
 
 * Original work by Jonathan Reinink (@reinink) and contributors
 * Port to Ruby on Rails by Georg Ledermann (@ledermann)
+* Port from Webpacker to Vite Rails (@ElMassimo)

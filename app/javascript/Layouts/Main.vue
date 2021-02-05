@@ -13,7 +13,7 @@
               role="navigation"
             >
               <logo
-                class="fill-white"
+                class="text-white"
                 width="120"
                 height="28"
               />
