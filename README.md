@@ -24,17 +24,19 @@ API methods to effortlessly integrate with the Rails backend.
 
 ![Screenshot](screenshot.jpg)
 
-<!-- There is a hosted installation of this demo available at https://pingcrm.ledermann.dev. Login with:
+## Demo 🚀
+
+Visit [the live demo](https://pingcrm-vite.herokuapp.com/). Login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-## Lighthouse performance audit
+To learn more about how to move from webpacker to [Vite Rails], check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/1).
 
-![Lighthouse audit](lighthouse.png) -->
+To learn more about how [<kbd>js_from_routes</kbd>][js_from_routes] can help you simplify your code, check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/2).
 
 
-## Installation
+## Installation 💿
 
 Clone the repo locally:
 
