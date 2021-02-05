@@ -22,19 +22,18 @@ which provides a substantially faster development experience.
 It also leverages [<kbd>js_from_routes</kbd>][js_from_routes] to auto-generate
 API methods to effortlessly integrate with the Rails backend.
 
-![Screenshot](screenshot.jpg)
-
 ## Demo 🚀
+
+To learn more about how to move from webpacker to [Vite Rails], check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/1).
+
+To learn more about how [<kbd>js_from_routes</kbd>][js_from_routes] can help you simplify your code, check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/2).
 
 Visit [the live demo](https://pingcrm-vite.herokuapp.com/). Login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-To learn more about how to move from webpacker to [Vite Rails], check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/1).
-
-To learn more about how [<kbd>js_from_routes</kbd>][js_from_routes] can help you simplify your code, check [this pull request](https://github.com/ElMassimo/pingcrm-vite/pull/2).
-
+<img width="1299" alt="Screen Shot 2021-02-05 at 16 34 59" src="https://user-images.githubusercontent.com/1158253/107080663-5ca35a80-67d0-11eb-90aa-4a2e1db539c5.png">
 
 ## Installation 💿
 
