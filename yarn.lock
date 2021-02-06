@@ -3646,10 +3646,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-ruby@^1.0.6:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-1.0.7.tgz#824af47ffb95da31cd369fadddd2fc3a245c210f"
-  integrity sha512-PBJ27ciiexEqDve6rlv93n3L+s3RfS62QKDvU1uJMcNeNVPcOkEF7sdXtX0/B34/ZkQhiZjdTHzY665pkPwgPA==
+vite-plugin-ruby@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-1.0.8.tgz#321410c2afa5ecee1a83a61a91cf0b93165a611a"
+  integrity sha512-mE61pWBpRaku/Yp4wEYNu4MM4Z5a3kaWEBT71sbXXK/AFclS6Xe3x6UdxruQFR2vR+LqgAB3pXAX1w1LYp7ivQ==
   dependencies:
     fast-glob "^3.2.4"
 
@@ -3677,10 +3677,10 @@ vite-plugin-vue2@^1.2.0:
     vue "^2.6.11"
     vue-template-compiler "^2.6.11"
 
-vite@^2.0.0-beta.64:
-  version "2.0.0-beta.64"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.64.tgz#245cabc72335911d4cb704545f713d47e880d84f"
-  integrity sha512-/dR5rOXohhdXfkAIBAjmwX7JmoMWhQc7+VI6/EjyqXQCQzREmfBztLgTk/rPkmsNY87Cd71u9b+nlbcYK4TDCA==
+vite@^2.0.0-beta.65:
+  version "2.0.0-beta.65"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.65.tgz#e4e4576c01b9906d5fb3568e4068c80354107a70"
+  integrity sha512-mdHNTP6fGeb8m8lWAM3UbSPw1+un1lUv0i4MQJcNiK2/P01RHIY02VjQeXBv3NemkExkgLji88LN9ySFMUQpIw==
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"
