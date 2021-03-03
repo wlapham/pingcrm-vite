@@ -15,12 +15,15 @@
 [js_from_routes]: https://github.com/ElMassimo/js_from_routes
 [webpacker]: https://github.com/rails/webpacker
 [vite]: http://vitejs.dev/
+[Windi CSS]: http://windicss.netlify.app/
 
 Unlike the [original demo], this replaces [webpacker] with [Vite Rails],
 which provides a substantially faster development experience.
 
 It also leverages [<kbd>js_from_routes</kbd>][js_from_routes] to auto-generate
 API methods to effortlessly integrate with the Rails backend.
+
+Styles are powered by [Windi CSS], a faster alternative to Tailwind CSS.
 
 ## Demo 🚀
 

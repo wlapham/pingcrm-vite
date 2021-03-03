@@ -15,7 +15,6 @@
     "@popperjs/core": "^2.5.3",
     "lodash": "^4.17.20",
     "portal-vue": "^2.1.7",
-    "tailwindcss": "2.0.1-compat",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0"
@@ -30,8 +29,9 @@
     "postcss": "^8",
     "postcss-nested": "^5.0.3",
     "sass": "^1.32.6",
-    "vite": "^2.0.0-beta.69",
-    "vite-plugin-ruby": "^1.0.11",
+    "vite": "^2.0.5",
+    "vite-plugin-ruby": "^1.0.15",
+    "vite-plugin-windicss": "^0.6.4",
     "vite-plugin-vue2": "^1.2.0"
   },
   "resolutions": {

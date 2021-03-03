@@ -101,7 +101,7 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.8)
+    i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -127,7 +127,7 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
-    minitest (5.14.3)
+    minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.4)
     nokogiri (1.11.1)
@@ -236,7 +236,7 @@ GEM
     vite_rails (2.0.2)
       railties (>= 5.1)
       vite_ruby
-    vite_ruby (1.0.2)
+    vite_ruby (1.0.5)
       dry-cli (~> 0.6)
       rack-proxy (>= 0.6.1)
       zeitwerk
