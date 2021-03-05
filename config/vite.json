@@ -1,5 +1,6 @@
 {
   "all": {
+    "devServerConnectTimeout": 0.01,
     "sourceCodeDir": "app/javascript",
     "watchAdditionalPaths": []
   },

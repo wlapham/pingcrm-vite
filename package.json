@@ -31,7 +31,7 @@
     "sass": "^1.32.6",
     "vite": "^2.0.5",
     "vite-plugin-ruby": "^1.0.15",
-    "vite-plugin-windicss": "^0.6.4",
+    "vite-plugin-windicss": "^0.6.6",
     "vite-plugin-vue2": "^1.2.0"
   },
   "resolutions": {

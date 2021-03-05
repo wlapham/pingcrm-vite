@@ -634,10 +634,10 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.5.tgz#c131d88bd6713cc4d93b3bb1372edb1983225ff0"
   integrity sha512-gYsNoGkWejBxNO6SNRjOh/xKeZ0H0V+TFzaPzODfBjkAIb0aQgBuixC1brandC/CDJy1wYPwSoYrXpvul7m6yw==
 
-"@windicss/plugin-utils@0.6.4":
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-0.6.4.tgz#854f411b156fea61b2e6724799e91f0f9407a637"
-  integrity sha512-5RZQ71snmoKmZEXHyCByOohUM/SsWIX856+geMwOfbMOGL0guv/1TVg2PalFrZh3k/HfqQnO2ft5YSWKtrW32A==
+"@windicss/plugin-utils@0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@windicss/plugin-utils/-/plugin-utils-0.6.6.tgz#cc193cbf7f09011049e718703a1dbb64471280c2"
+  integrity sha512-9W6sy8oSDqYDeTtv03S5AMm5qc8w70f2obwFiVeI0JuhFM1lra3+bMin4HEbRJqJQCjy6xDiSkF6vxOiLSg9kQ==
   dependencies:
     esbuild "^0.8.54"
     esbuild-register "^2.0.0"
@@ -3542,12 +3542,12 @@ vite-plugin-vue2@^1.2.0:
     vue "^2.6.11"
     vue-template-compiler "^2.6.11"
 
-vite-plugin-windicss@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-0.6.4.tgz#2d2bc7831dddff129d597959efaff616c6408a01"
-  integrity sha512-4BuUglBXeNIrIDfSKyg7rvqKEmxvyja2aKJxgHdOCICV8jIz2MvrZaRS9a74gUihz+OohBYqLnkOlfD+sCIQBg==
+vite-plugin-windicss@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-0.6.6.tgz#502c321a1764dff1a232195cb7bfc04fd98ffc84"
+  integrity sha512-V2UlnHKxCmH1BwrI96YMaBocpIoHzBRYsfv1GOi0jMs7gyakAz3QcnjGwdB2ZtSsE+wPlv5MhSFbL1CFVsvW/A==
   dependencies:
-    "@windicss/plugin-utils" "0.6.4"
+    "@windicss/plugin-utils" "0.6.6"
     windicss "^2.2.3"
 
 vite@^2.0.5:
