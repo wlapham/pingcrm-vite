@@ -19,13 +19,21 @@
         Vite ⚡️ Rails
       </ExternalLink>
       instead of Webpacker, which provides a
-      <ExternalLink href="https://vite-rails.netlify.app/features">
+      <ExternalLink href="https://vite-rails.netlify.app/guide/introduction">
         faster development experience
       </ExternalLink>
       thanks to
-      <ExternalLink href="https://vite-rails.netlify.app/features">
+      <ExternalLink href="https://vite-rails.netlify.app/guide/introduction">
         Vite
       </ExternalLink>.
+    </p>
+
+    <p class="mb-8 leading-normal">
+      It also uses
+      <ExternalLink href="https://js-from-routes.netlify.app/">
+        JS From Routes
+      </ExternalLink>
+      to simplify navigation and making requests to the Rails server without hardcoding paths.
     </p>
 
     <p
