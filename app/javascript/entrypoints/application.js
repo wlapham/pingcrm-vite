@@ -10,6 +10,10 @@ import Vue from 'vue'
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
 
+import api from '@/api'
+
+Vue.prototype.$api = api
+
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
 
@@ -53,5 +57,3 @@ new Vue({
     },
   }),
 }).$mount(el)
-
-import('@/api').then(({ default: api }) => Vue.prototype.$api = api)
