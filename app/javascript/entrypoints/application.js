@@ -21,11 +21,9 @@ Vue.mixin(ConstantsMixin)
 
 import { app, plugin } from '@inertiajs/inertia-vue'
 import { InertiaProgress as progress } from '@inertiajs/progress'
+
 Vue.use(plugin)
 progress.init()
-
-import api from '@/api/index'
-Vue.prototype.$api = api
 
 const el = document.getElementById('app')
 
@@ -55,3 +53,5 @@ new Vue({
     },
   }),
 }).$mount(el)
+
+import('@/api').then(({ default: api }) => Vue.prototype.$api = api)

@@ -47,7 +47,7 @@
       <inertia-link
         v-if="can.create_user"
         class="btn-indigo"
-        :href="UsersApi.new.path()"
+        :href="$api.users.new.path()"
       >
         <span>Create</span>
         <span class="hidden md:inline">User</span>
@@ -156,9 +156,6 @@ import UsersApi from '@/api/UsersApi'
 
 export default {
   metaInfo: { title: 'Users' },
-  constants: {
-    UsersApi,
-  },
   components: {
     Icon,
     SearchFilter,

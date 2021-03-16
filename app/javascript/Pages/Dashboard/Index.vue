@@ -68,7 +68,7 @@
 import Layout from '@/Layouts/Main.vue'
 import ExternalLink from '@/Shared/ExternalLink.vue'
 import * as timeago from 'timeago.js'
-import DashboardApi from '@/api/DashboardApi'
+import { dashboard } from '@/api'
 
 export default {
   metaInfo: { title: 'Dashboard' },
@@ -84,7 +84,7 @@ export default {
   },
   computed: {
     error500Path () {
-      return DashboardApi.exampleException.path()
+      return dashboard.exampleException.path()
     },
     relativeCommitTime() {
       return timeago.format(this.git.commit_time)

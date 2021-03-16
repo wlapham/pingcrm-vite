@@ -68,7 +68,7 @@ import FlashMessages from '@/Shared/FlashMessages.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 import Logo from '@/Shared/Logo.vue'
 import TextInput from '@/Shared/TextInput.vue'
-import SessionsApi from '@/api/Users/SessionsApi'
+import { usersSessions } from '@/api'
 
 export default {
   metaInfo: { title: 'Login' },
@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     login (form) {
-      SessionsApi.create({ form })
+      usersSessions.create({ form })
     },
   },
 }

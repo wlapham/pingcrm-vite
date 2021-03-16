@@ -343,15 +343,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@inertiajs/inertia-vue@^0.5.0":
+"@inertiajs/inertia-vue@^0.5.5":
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.5.5.tgz#e12683b91d2affe2442b50a1ee26c45fd2d7f34f"
   integrity sha512-f3kPJoXv8PXW6OVqSTbmynbVVVsTQb2m8k4sPmG5PsfmcXPukP3QEDBL3JDLgrNxpVzLyjh1oQXyW0fVop/mYQ==
 
 "@inertiajs/inertia@^0.8.0":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.8.4.tgz#c983e7363ff602a20103f3fee1e6caf103d551e1"
-  integrity sha512-iTiyqXNvOYCY7/llhJgAHBKuUNlz6FBgXV/w0yzugpepqVR23kxSjepYLYdAKWS5Noq6W+Iz7oLeqFjuoCy53w==
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.8.5.tgz#622fc22aced645ce795414a3ac54b9722acbe585"
+  integrity sha512-PeYDy/GbZHTZM3XtghNGLXyBubNgc3qjzF43q0nkbyaPN6X6Rai6fojDJyJ1vINJjcNUQ3su0Nn3BsqZlqjJ1g==
   dependencies:
     axios "^0.21.1"
     deepmerge "^4.0.0"
@@ -363,6 +363,16 @@
   integrity sha512-FVlxQjA3qxXoSljbhDWpXKdDth0IxovmI9lNJLbvxzpVir7iL5n9MCX7Sx9X+JcKdTKezCbGnc3CXQ92B38wbA==
   dependencies:
     nprogress "^0.2.0"
+
+"@js-from-routes/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@js-from-routes/core/-/core-1.0.1.tgz#e8014643a8eac056306a5f1a0063b853fd03728c"
+  integrity sha512-Nay/MTXAbxgACzgbXO15PMWTeSSerYduzHoXUhTEB6YUH4UCURbpKQGymDCQ6jb8s2tO+mBkLc0K5+BGTYQ3kA==
+
+"@js-from-routes/inertia@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@js-from-routes/inertia/-/inertia-1.0.3.tgz#0ea6a38af4a77edd184908c5204240f2091c8bdd"
+  integrity sha512-qPZDzNwss9WQiVC8lbJrtqSkh7oScuG6Y1aVssYCu7+F8Fu4l+vce16Z8kZSkvpXDNoUWaq4Cc+ga4j4pSmsCg==
 
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"

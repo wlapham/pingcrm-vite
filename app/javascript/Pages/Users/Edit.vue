@@ -4,7 +4,7 @@
       <h1 class="font-bold text-3xl">
         <inertia-link
           class="text-indigo-500 hover:text-indigo-600"
-          :href="UsersApi.list.path()"
+          :href="$api.users.list.path()"
         >
           Users
         </inertia-link>
@@ -61,16 +61,13 @@ import Layout from '@/Layouts/Main.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 import UserForm from './Form.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
-import UsersApi from '@/api/UsersApi'
+import { users } from '@/api'
 
 export default {
   metaInfo() {
     return {
       title: `${this.form.user.first_name} ${this.form.user.last_name}`,
     }
-  },
-  constants: {
-    UsersApi,
   },
   components: {
     LoadingButton,
@@ -101,18 +98,18 @@ export default {
   },
   methods: {
     submit(form) {
-      UsersApi.update({ params: this.user, form,
+      users.update({ params: this.user, form,
         onSuccess: () => form.reset('password', 'photo'),
       })
     },
     destroy() {
       if (confirm('Are you sure you want to delete this user?')) {
-        UsersApi.destroy(this.user)
+        users.destroy(this.user)
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this user?')) {
-        UsersApi.restore(this.user)
+        users.restore(this.user)
       }
     },
   },

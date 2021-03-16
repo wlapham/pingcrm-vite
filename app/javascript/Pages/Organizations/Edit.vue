@@ -3,7 +3,7 @@
     <h1 class="mb-8 font-bold text-3xl">
       <inertia-link
         class="text-indigo-500 hover:text-indigo-800"
-        :href="OrganizationsApi.list.path()"
+        :href="$api.organizations.list.path()"
       >
         Organizations
       </inertia-link>
@@ -20,7 +20,7 @@
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <organization-form
         v-model="form"
-        @submit="OrganizationsApi.update({ params: organization, form })"
+        @submit="$api.organizations.update({ params: organization, form })"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
           <button
@@ -131,14 +131,11 @@ import OrganizationForm from './Form.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import _ from 'lodash'
 
-import OrganizationsApi from '@/api/OrganizationsApi'
+import { organizations } from '@/api'
 
 export default {
   metaInfo() {
     return { title: this.form.organization.name }
-  },
-  constants: {
-    OrganizationsApi,
   },
   components: {
     Icon,
@@ -171,12 +168,12 @@ export default {
     },
     destroy() {
       if (confirm('Are you sure you want to delete this organization?')) {
-        OrganizationsApi.destroy(this.organization)
+        organizations.destroy(this.organization)
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this organization?')) {
-        OrganizationsApi.restore(this.organization)
+        organizations.restore(this.organization)
       }
     },
   },

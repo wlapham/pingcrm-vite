@@ -3,7 +3,7 @@
     <h1 class="mb-8 font-bold text-3xl">
       <inertia-link
         class="text-indigo-400 hover:text-indigo-600"
-        :href="UsersApi.list.path()"
+        :href="$api.users.list.path()"
       >
         Users
       </inertia-link>
@@ -12,7 +12,7 @@
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <user-form
         v-model="form"
-        @submit="UsersApi.create({ form })"
+        @submit="$api.users.create({ form })"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
           <loading-button
@@ -32,13 +32,9 @@
 import Layout from '@/Layouts/Main.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
 import UserForm from './Form.vue'
-import UsersApi from '@/api/UsersApi'
 
 export default {
   metaInfo: { title: 'Create User' },
-  constants: {
-    UsersApi,
-  },
   components: {
     LoadingButton,
     UserForm,

@@ -29,7 +29,7 @@
       </search-filter>
       <inertia-link
         class="btn-indigo"
-        :href="ContactsApi.new.path()"
+        :href="$api.contacts.new.path()"
       >
         <span>Create</span>
         <span class="hidden md:inline">Contact</span>
@@ -150,7 +150,6 @@ import ContactsApi from '@/api/ContactsApi'
 
 export default {
   metaInfo: { title: 'Contacts' },
-  constants: { ContactsApi },
   components: {
     Icon,
     Pagination,

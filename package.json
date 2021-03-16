@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@inertiajs/inertia": "^0.8.0",
-    "@inertiajs/inertia-vue": "^0.5.0",
+    "@inertiajs/inertia-vue": "^0.5.5",
     "@inertiajs/progress": "^0.2.4",
+    "@js-from-routes/core": "^1.0.1",
+    "@js-from-routes/inertia": "^1.0.3",
     "@popperjs/core": "^2.5.3",
     "lodash": "^4.17.20",
     "portal-vue": "^2.1.7",
@@ -31,8 +33,8 @@
     "sass": "^1.32.6",
     "vite": "^2.0.5",
     "vite-plugin-ruby": "^1.0.15",
-    "vite-plugin-windicss": "^0.6.6",
-    "vite-plugin-vue2": "^1.2.0"
+    "vite-plugin-vue2": "^1.2.0",
+    "vite-plugin-windicss": "^0.6.6"
   },
   "resolutions": {
     "autoprefixer": "10.2.4",
