@@ -3520,6 +3520,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+vite-plugin-full-reload@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-full-reload/-/vite-plugin-full-reload-0.1.1.tgz#e1105153dcd8ff78b4e86f93405cea887db8b027"
+  integrity sha512-z+F4ZZzkFOfAMgKBtvmWiLOvj/oKC74oDNonG9+9hjK8gSMNN/tX4u5290sa2bu1nDFWDIXkTJIMiFtvkblyeg==
+
 vite-plugin-ruby@^1.0.15:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-1.0.15.tgz#7376dcb04a3f503fe809543842452019b762f8e7"

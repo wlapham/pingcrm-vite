@@ -13,6 +13,7 @@
 [original demo]: https://github.com/ledermann/pingcrm
 [vite rails]: https://github.com/ElMassimo/vite_rails
 [js_from_routes]: https://github.com/ElMassimo/js_from_routes
+[vite-plugin-full-reload]: https://github.com/ElMassimo/vite-plugin-full-reload
 [webpacker]: https://github.com/rails/webpacker
 [vite]: http://vitejs.dev/
 [Windi CSS]: http://windicss.netlify.app/
@@ -20,8 +21,7 @@
 Unlike the [original demo], this replaces [webpacker] with [Vite Rails],
 which provides a substantially faster development experience.
 
-It also leverages [<kbd>js_from_routes</kbd>][js_from_routes] to auto-generate
-API methods to effortlessly integrate with the Rails backend.
+It also leverages [<kbd>js_from_routes</kbd>][js_from_routes] to auto-generate API methods to effortlessly integrate with the Rails backend, which works nicely in combination with <kbd>[vite-plugin-full-reload]</kbd>
 
 Styles are powered by [Windi CSS], a faster alternative to Tailwind CSS.
 
