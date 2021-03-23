@@ -9,7 +9,7 @@
     "yarn": "1.x"
   },
   "dependencies": {
-    "@inertiajs/inertia": "^0.8.0",
+    "@inertiajs/inertia": "^0.8.5",
     "@inertiajs/inertia-vue": "^0.5.5",
     "@inertiajs/progress": "^0.2.4",
     "@js-from-routes/core": "^1.0.1",
@@ -23,7 +23,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@antfu/eslint-config": "^0.4.3",
+    "@mussi/eslint-config": "^0.5",
     "autoprefixer": "^10",
     "eslint": "^7.18.0",
     "eslint-formatter-friendly": "^7.0.0",
@@ -31,11 +31,11 @@
     "postcss": "^8",
     "postcss-nested": "^5.0.3",
     "sass": "^1.32.6",
-    "vite": "^2.0.5",
-    "vite-plugin-full-reload": "^0.1.1",
-    "vite-plugin-ruby": "^1.0.15",
+    "vite": "^2.1",
+    "vite-plugin-full-reload": "^0.2",
+    "vite-plugin-ruby": "^1.0",
     "vite-plugin-vue2": "^1.2.0",
-    "vite-plugin-windicss": "^0.6.6"
+    "vite-plugin-windicss": "^0.8"
   },
   "resolutions": {
     "autoprefixer": "10.2.4",
