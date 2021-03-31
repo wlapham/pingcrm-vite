@@ -12,9 +12,9 @@ class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
 
   teardown do
-    messages = page.driver.browser.manage.logs.get(:browser).map do |log|
-      "[#{log.level}] #{log.message}"
-    end
+    messages = page.driver.browser.manage.logs.get(:browser).
+               map { |log| "[#{log.level}] #{log.message}" }.
+               reject { |msg| msg.include?('Please use the new visit event callbacks instead') }
 
     assert_empty(messages)
   end
