@@ -3,18 +3,13 @@ class OrganizationsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    pagy, paged_organizations = pagy(
-      @organizations.
-        search(params[:search]).
-        trash_filter(params[:trashed]).
-        order(:name)
-    )
+    organizations = @organizations.
+                    search(params[:search]).
+                    trash_filter(params[:trashed]).
+                    order(:name)
 
     render inertia: 'Organizations/Index', props: {
-      organizations: jbuilder do |json|
-        json.data(paged_organizations, :id, :name, :phone, :city, :deleted_at)
-        json.meta pagy_metadata(pagy)
-      end,
+      organizations: paginate_data(organizations, serializer: OrganizationSerializer),
       filters: params.slice(:search, :trashed)
     }
   end

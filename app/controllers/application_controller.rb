@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
   include InertiaFlash
   include InertiaJson
 
+  # Used in BaseSerializer.
+  before_action { RequestLocals[:current_controller] = self }
+
   inertia_share auth: -> {
     {
       user: current_user.as_json(
@@ -19,4 +22,9 @@ class ApplicationController < ActionController::Base
       )
     }
   }
+
+  def paginate_data(items, serializer:)
+    pagy, paged_items = pagy(items)
+    { data: serializer.many(paged_items), meta: pagy_metadata(pagy) }
+  end
 end

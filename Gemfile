@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby File.read(File.expand_path('.ruby-version', __dir__)).chomp
 
+# A robust settings library for Ruby. Access your settings by calling methods on a safe immutable object (https://github.com/ElMassimo/better_settings)
 gem 'better_settings'
 
 # Full-stack web application framework. (https://rubyonrails.org)
@@ -22,6 +23,12 @@ gem 'image_processing', '~> 1.10'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.4', require: false
+
+# Provides integration to manage frontend assets with Vite.js (https://github.com/ElMassimo/vite_ruby)
+gem 'vite_rails'
+
+# Allows to register per-request thread-safe variables (https://github.com/ElMassimo/request_store_rails)
+gem 'request_store_rails'
 
 group :development, :test do
   # Ruby fast debugger - base + CLI (https://github.com/deivid-rodriguez/byebug)
@@ -88,8 +95,9 @@ gem 'devise'
 
 # A fast JSON parser and serializer. (http://www.ohler.com/oj)
 gem 'oj'
+
+# Faster JSON serialization for Ruby on Rails. Easily migrate away from Active Model Serializers (https://github.com/ElMassimo/oj_serializers)
 gem 'oj_serializers'
 
 # Simple authorization solution for Rails. (https://github.com/CanCanCommunity/cancancan)
 gem 'cancancan'
-gem 'vite_rails'

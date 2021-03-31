@@ -3,33 +3,21 @@ class ContactsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    pagy, paged_contacts = pagy(
-      @contacts.
-        includes(:organization).
-        search(params[:search]).
-        trash_filter(params[:trashed]).
-        order_by_name
-    )
+    contacts = @contacts.
+               includes(:organization).
+               search(params[:search]).
+               trash_filter(params[:trashed]).
+               order_by_name
 
     render inertia: 'Contacts/Index', props: {
-      contacts: jbuilder do |json|
-        json.data(paged_contacts) do |contact|
-          json.(contact, :id, :name, :phone, :city, :deleted_at)
-          json.organization(contact.organization, :name) if contact.organization
-        end
-        json.meta pagy_metadata(pagy)
-      end,
+      contacts: paginate_data(contacts, serializer: ContactSerializer),
       filters: params.slice(:search, :trashed)
     }
   end
 
   def new
     render inertia: 'Contacts/New', props: {
-      organizations: -> {
-        jbuilder do |json|
-          json.array! current_user.organizations.order(:name), :id, :name
-        end
-      }
+      organizations:  ModelSerializer.many(current_user.organizations.order(:name))
     }
   end
 
@@ -38,11 +26,7 @@ class ContactsController < ApplicationController
       contact: jbuilder do |json|
         json.(@contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
       end,
-      organizations: -> {
-        jbuilder do |json|
-          json.array! current_user.organizations.order(:name), :id, :name
-        end
-      }
+      organizations: ModelSerializer.many(current_user.organizations.order(:name))
     }
   end
 

@@ -10,15 +10,7 @@ class UsersController < ApplicationController
              order_by_name
 
     render inertia: 'Users/Index', props: {
-      users: jbuilder do |json|
-        json.array! @users do |user|
-          json.(user, :id, :email, :name, :owner, :deleted_at)
-          json.photo user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
-          json.can do
-            json.edit_user can?(:edit, user)
-          end
-        end
-      end,
+      users: UserSerializer.many(@users),
       can: {
         create_user: can?(:create, User)
       },
