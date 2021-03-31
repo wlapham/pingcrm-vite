@@ -4,7 +4,10 @@
       Dashboard
     </h1>
     <p class="mb-8 leading-normal">
-      Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
+      Hey there! Welcome to
+      <ExternalLink href="https://github.com/ElMassimo/pingcrm-vite">
+        Ping CRM
+      </ExternalLink>, a demo app designed to help illustrate how
       <ExternalLink href="https://inertiajs.com">
         Inertia.js
       </ExternalLink>
@@ -36,17 +39,9 @@
       to simplify navigation and making requests to the Rails server without hardcoding paths.
     </p>
 
-    <p
-      v-if="git.commit_url"
-      class="mb-10 leading-normal"
-    >
+    <p class="mb-10 leading-normal">
       Version
-      <a
-        :href="git.commit_url"
-        class="hover:underline"
-      >
-        {{ git.commit_sha }}
-      </a>
+      <a :href="releaseUrl" class="hover:underline">{{ release.commit || 'development' }}</a>
       &minus;
       {{ relativeCommitTime }}
     </p>
@@ -85,17 +80,18 @@ export default {
   },
   layout: Layout,
   props: {
-    git: {
-      type: Object,
-      required: true,
-    },
+    release: { type: Object, required: true },
+    repo: { type: Object, required: true },
   },
   computed: {
     error500Path () {
       return dashboard.exampleException.path()
     },
-    relativeCommitTime() {
-      return timeago.format(this.git.commit_time)
+    relativeCommitTime () {
+      return timeago.format(this.release.created_at)
+    },
+    releaseUrl () {
+      return this.release.commit ? `${this.repo.url}/commit/${this.release.commit}` : this.repo.url
     },
   },
 }

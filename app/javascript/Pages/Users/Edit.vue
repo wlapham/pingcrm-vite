@@ -59,12 +59,12 @@
 <script>
 import Layout from '@/Layouts/Main.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
-import UserForm from './Form.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import { users } from '@/api'
+import UserForm from './Form.vue'
 
 export default {
-  metaInfo() {
+  metaInfo () {
     return {
       title: `${this.form.user.first_name} ${this.form.user.last_name}`,
     }
@@ -86,7 +86,7 @@ export default {
     },
   },
   remember: 'form',
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         user: {
@@ -97,20 +97,20 @@ export default {
     }
   },
   methods: {
-    submit(form) {
-      users.update({ params: this.user, form,
+    submit (form) {
+      users.update({
+        params: this.user,
+        form,
         onSuccess: () => form.reset('password', 'photo'),
       })
     },
-    destroy() {
-      if (confirm('Are you sure you want to delete this user?')) {
+    destroy () {
+      if (confirm('Are you sure you want to delete this user?'))
         users.destroy(this.user)
-      }
     },
-    restore() {
-      if (confirm('Are you sure you want to restore this user?')) {
+    restore () {
+      if (confirm('Are you sure you want to restore this user?'))
         users.restore(this.user)
-      }
     },
   },
 }

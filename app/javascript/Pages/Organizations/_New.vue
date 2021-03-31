@@ -18,8 +18,8 @@
 
 <script>
 import LoadingButton from '@/Shared/LoadingButton.vue'
-import OrganizationForm from './Form.vue'
 import { organizations } from '@/api'
+import OrganizationForm from './Form.vue'
 
 export default {
   components: {
@@ -27,7 +27,7 @@ export default {
     OrganizationForm,
   },
   remember: 'form',
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         organization: {},
@@ -35,8 +35,9 @@ export default {
     }
   },
   methods: {
-    submit(form) {
-      organizations.create({ form,
+    submit (form) {
+      organizations.create({
+        form,
         onSuccess: () => {
           this.$emit('success')
           form.reset('organization')

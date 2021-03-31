@@ -10,7 +10,7 @@
       slim
     />
 
-    <slot />
+    <slot/>
   </div>
 </template>
 

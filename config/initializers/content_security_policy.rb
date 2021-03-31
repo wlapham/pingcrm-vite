@@ -6,10 +6,10 @@
 
 Rails.application.config.content_security_policy do |policy|
   policy.default_src :none
-  policy.font_src     :self
-  policy.img_src(*[   :self, :data, ENV['MATOMO_HOST']].compact)
-  policy.object_src   :none
-  policy.form_action  :self
+  policy.font_src :self
+  policy.img_src :self, :data
+  policy.object_src :none
+  policy.form_action :self
   policy.manifest_src :self
 
   if Rails.env.development?
@@ -19,8 +19,7 @@ Rails.application.config.content_security_policy do |policy|
     # Inertia.js uses inline scripts to display error modal in development
     policy.script_src :self, :unsafe_eval, "http://#{ ViteRuby.config.host_with_port }", :unsafe_inline, 'https://polyfill.io'
   else
-    policy.connect_src(*[:self, ENV['MATOMO_HOST']].compact)
-    policy.script_src(*[:self, 'https://polyfill.io', ENV['MATOMO_HOST'], :blob].compact)
+    policy.script_src :self, :blob
   end
 
   # @inertiajs/progress uses inline styles

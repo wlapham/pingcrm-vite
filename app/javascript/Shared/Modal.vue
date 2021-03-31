@@ -7,28 +7,28 @@
       class="fixed inset-0"
     >
       <transition
-        enter-active-class="transition-all transition-fast ease-out-quad"
-        leave-active-class="transition-all transition-medium ease-in-quad"
-        enter-class="opacity-0"
-        enter-to-class="opacity-100"
-        leave-class="opacity-100"
-        leave-to-class="opacity-0"
+        enterActiveClass="transition-all transition-fast ease-out-quad"
+        leaveActiveClass="transition-all transition-medium ease-in-quad"
+        enterClass="opacity-0"
+        enterToClass="opacity-100"
+        leaveClass="opacity-100"
+        leaveToClass="opacity-0"
         appear
         @before-leave="backdropLeaving = true"
         @after-leave="backdropLeaving = false"
       >
         <div v-if="showBackdrop">
-          <div class="fixed inset-0 bg-black opacity-50" />
+          <div class="fixed inset-0 bg-black opacity-50"/>
         </div>
       </transition>
 
       <transition
-        enter-active-class="transition-all transition-fast ease-out-quad"
-        leave-active-class="transition-all transition-medium ease-in-quad"
-        enter-class="opacity-0 scale-70"
-        enter-to-class="opacity-100 scale-100"
-        leave-class="opacity-100 scale-100"
-        leave-to-class="opacity-0 scale-70"
+        enterActiveClass="transition-all transition-fast ease-out-quad"
+        leaveActiveClass="transition-all transition-medium ease-in-quad"
+        enterClass="opacity-0 scale-70"
+        enterToClass="opacity-100 scale-100"
+        leaveClass="opacity-100 scale-100"
+        leaveToClass="opacity-0 scale-70"
         appear
         @before-leave="cardLeaving = true"
         @after-leave="cardLeaving = false"
@@ -38,7 +38,7 @@
           class="relative h-full overflow-y-auto text-center"
           @click="close"
         >
-          <div class="absolute inline-block align-middle w-0 h-screen" />
+          <div class="absolute inline-block align-middle w-0 h-screen"/>
 
           <div
             class="inline-block align-middle text-left my-6 rounded overflow-hidden"
@@ -60,12 +60,12 @@
                   class="w-4 h-4"
                   viewBox="0 0 20 20"
                 >
-                  <path d="M10 8.59L2.93 1.51 1.51 2.93 8.59 10l-7.08 7.07 1.42 1.42L10 11.41l7.07 7.08 1.42-1.42L11.41 10l7.08-7.07-1.42-1.42L10 8.59z" />
+                  <path d="M10 8.59L2.93 1.51 1.51 2.93 8.59 10l-7.08 7.07 1.42 1.42L10 11.41l7.07 7.08 1.42-1.42L11.41 10l7.08-7.07-1.42-1.42L10 8.59z"/>
                 </svg>
               </button>
             </div>
 
-            <slot />
+            <slot/>
           </div>
         </div>
       </transition>
@@ -85,7 +85,7 @@ export default {
       default: null,
     },
   },
-  data() {
+  data () {
     return {
       showModal: false,
       showBackdrop: false,
@@ -95,33 +95,31 @@ export default {
     }
   },
   computed: {
-    leaving() {
+    leaving () {
       return this.backdropLeaving || this.cardLeaving
     },
   },
   watch: {
     open: {
-      handler: function(newValue) {
-        if (newValue) {
+      handler (newValue) {
+        if (newValue)
           this.show()
-        } else {
+        else
           this.close()
-        }
       },
       immediate: true,
     },
-    leaving(newValue) {
+    leaving (newValue) {
       if (newValue === false) {
         this.showModal = false
         this.$emit('close')
       }
     },
   },
-  created() {
-    const onEscape = e => {
-      if (this.open && e.keyCode === 27) {
+  created () {
+    const onEscape = (e) => {
+      if (this.open && e.keyCode === 27)
         this.close()
-      }
     }
     document.addEventListener('keydown', onEscape)
     this.$once('hook:destroyed', () => {
@@ -129,13 +127,13 @@ export default {
     })
   },
   methods: {
-    show() {
+    show () {
       this.showModal = true
       this.showBackdrop = true
       this.showContent = true
       document.body.style.setProperty('overflow', 'hidden')
     },
-    close() {
+    close () {
       this.showBackdrop = false
       this.showContent = false
       document.body.style.removeProperty('overflow')

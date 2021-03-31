@@ -43,7 +43,7 @@
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Country"
       >
-        <option :value="null" />
+        <option :value="null"/>
         <option value="CA">
           Canada
         </option>
@@ -58,7 +58,7 @@
         label="Postal code"
       />
     </div>
-    <slot />
+    <slot/>
   </form>
 </template>
 
@@ -79,10 +79,10 @@ export default {
   },
   computed: {
     form: {
-      get() {
+      get () {
         return this.value
       },
-      set(val) {
+      set (val) {
         this.$emit('input', val)
       },
     },

@@ -49,7 +49,7 @@
         label="Photo"
       />
     </div>
-    <slot />
+    <slot/>
   </form>
 </template>
 
@@ -72,10 +72,10 @@ export default {
   },
   computed: {
     form: {
-      get() {
+      get () {
         return this.value
       },
-      set(val) {
+      set (val) {
         this.$emit('input', val)
       },
     },

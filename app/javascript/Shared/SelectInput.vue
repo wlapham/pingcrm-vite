@@ -13,7 +13,7 @@
       class="form-select"
       :class="{ error: errors.length }"
     >
-      <slot />
+      <slot/>
     </select>
     <div
       v-if="errors.length"
@@ -30,7 +30,7 @@ export default {
   props: {
     id: {
       type: String,
-      default() {
+      default () {
         return `select-input-${this._uid}`
       },
     },
@@ -47,21 +47,21 @@ export default {
       default: () => [],
     },
   },
-  data() {
+  data () {
     return {
       selected: this.value,
     }
   },
   watch: {
-    selected(selected) {
+    selected (selected) {
       this.$emit('input', selected)
     },
   },
   methods: {
-    focus() {
+    focus () {
       this.$refs.input.focus()
     },
-    select() {
+    select () {
       this.$refs.input.select()
     },
   },

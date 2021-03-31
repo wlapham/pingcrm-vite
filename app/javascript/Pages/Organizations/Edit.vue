@@ -127,14 +127,14 @@
 import Icon from '@/Shared/Icon.vue'
 import Layout from '@/Layouts/Main.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
-import OrganizationForm from './Form.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import _ from 'lodash'
 
 import { organizations } from '@/api'
+import OrganizationForm from './Form.vue'
 
 export default {
-  metaInfo() {
+  metaInfo () {
     return { title: this.form.organization.name }
   },
   components: {
@@ -155,7 +155,7 @@ export default {
     },
   },
   remember: 'form',
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         organization: _.omit(this.organization, 'id', 'deleted_at'),
@@ -166,15 +166,13 @@ export default {
     pathToEditContact (contact) {
       return this.$api.contacts.edit.path(contact)
     },
-    destroy() {
-      if (confirm('Are you sure you want to delete this organization?')) {
+    destroy () {
+      if (confirm('Are you sure you want to delete this organization?'))
         organizations.destroy(this.organization)
-      }
     },
-    restore() {
-      if (confirm('Are you sure you want to restore this organization?')) {
+    restore () {
+      if (confirm('Are you sure you want to restore this organization?'))
         organizations.restore(this.organization)
-      }
     },
   },
 }

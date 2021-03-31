@@ -22,8 +22,8 @@
         class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-900 border-gray-400 hover:bg-white focus:border-indigo-500 focus:text-indigo-500"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
         :href="link.url"
-        preserve-state
-        preserve-scroll
+        preserveState
+        preserveScroll
       >
         {{ link.label }}
       </inertia-link>
@@ -41,13 +41,13 @@ export default {
   },
 
   computed: {
-    links() {
+    links () {
       return [
         {
           label: 'Previous',
           url: this.url(this.meta.prev),
         },
-        ...this.meta.sequels['0'].map(page => {
+        ...this.meta.sequels['0'].map((page) => {
           return {
             label: page,
             url: this.url(page),
@@ -63,13 +63,13 @@ export default {
   },
 
   methods: {
-    url(pageNumber) {
+    url (pageNumber) {
       return pageNumber
         ? this.meta.scaffold_url.replace(/__pagy_page__/, pageNumber)
         : null
     },
-    active(pageNumber) {
-      return this.meta.page == pageNumber
+    active (pageNumber) {
+      return this.meta.page.toString() === pageNumber
     },
   },
 }

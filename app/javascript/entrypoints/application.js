@@ -8,52 +8,37 @@ import '~/styles/application.css'
 
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
-Vue.use(VueMeta)
 
 import api from '@/api'
 
-Vue.prototype.$api = api
-
 import PortalVue from 'portal-vue'
-Vue.use(PortalVue)
-
-import MatomoTracker from '@/utils/matomo-tracker'
-Vue.use(MatomoTracker)
 
 import ConstantsMixin from '@/utils/ConstantsMixin'
-Vue.mixin(ConstantsMixin)
 
 import { app, plugin } from '@inertiajs/inertia-vue'
 import { InertiaProgress as progress } from '@inertiajs/progress'
+Vue.use(VueMeta)
+
+Vue.prototype.$api = api
+Vue.use(PortalVue)
+Vue.mixin(ConstantsMixin)
 
 Vue.use(plugin)
 progress.init()
 
 const el = document.getElementById('app')
+const initialPage = JSON.parse(el.dataset.page)
 
 const pages = import.meta.glob('../Pages/**/*.vue')
+const resolveComponent = (name) => {
+  const importPage = pages[`../Pages/${name}.vue`]
+  if (!importPage) throw new Error(`Unknown page ${name}. Is it located under Pages with a .vue extension?`)
+  return importPage().then(module => module.default)
+}
 
 new Vue({
   metaInfo: {
-    titleTemplate: (title) => title ? `${title} - PingCRM` : 'PingCRM',
+    titleTemplate: title => title ? `${title} - PingCRM` : 'PingCRM',
   },
-  render: h => h(app, {
-    props: {
-      initialPage: JSON.parse(el.dataset.page),
-      resolveComponent: name => {
-        const importPage = pages[`../Pages/${name}.vue`]
-        if (!importPage) throw new Error(`Unknown page ${name}. Is it located under Pages with a .vue extension?`)
-        return importPage().then(module => module.default)
-      },
-      transformProps: props => {
-        if (Vue.matomo.enabled)
-          // Wait a bit to allow VueMeta to update the document.title
-          setTimeout(() => {
-            Vue.matomo.trackPageView()
-          }, 100)
-
-        return props
-      },
-    },
-  }),
+  render: h => h(app, { props: { initialPage, resolveComponent } }),
 }).$mount(el)

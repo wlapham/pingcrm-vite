@@ -10,12 +10,12 @@
         @submit.prevent="login(form)"
       >
         <div class="px-10 py-12">
-          <flash-messages />
+          <flash-messages/>
 
           <h1 class="text-center font-bold text-3xl">
             Welcome Back!
           </h1>
-          <div class="mx-auto mt-6 w-24 border-b-2" />
+          <div class="mx-auto mt-6 w-24 border-b-2"/>
           <text-input
             v-model="form.user.email"
             class="mt-10"
@@ -79,7 +79,7 @@ export default {
     TextInput,
   },
   layout: Layout,
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         user: {

@@ -19,7 +19,7 @@
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Organization"
       >
-        <option :value="null" />
+        <option :value="null"/>
         <option
           v-for="organization in organizations"
           :key="organization.id"
@@ -64,7 +64,7 @@
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Country"
       >
-        <option :value="null" />
+        <option :value="null"/>
         <option value="CA">
           Canada
         </option>
@@ -80,7 +80,7 @@
       />
     </div>
 
-    <slot />
+    <slot/>
   </form>
 </template>
 
@@ -105,10 +105,10 @@ export default {
   },
   computed: {
     form: {
-      get() {
+      get () {
         return this.value
       },
-      set(val) {
+      set (val) {
         this.$emit('input', val)
       },
     },

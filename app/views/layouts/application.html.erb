@@ -7,9 +7,6 @@
     <meta content="PingCRM" name="application-name" />
     <meta content="#667eea" name="theme-color" />
 
-    <%= tag :meta, name: 'matomo-host', content: ENV['MATOMO_HOST'] %>
-    <%= tag :meta, name: 'matomo-id', content: ENV['MATOMO_ID'] %>
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= vite_client_tag %>
@@ -17,13 +14,7 @@
     <link rel="manifest" href="/site.webmanifest" >
     <link rel="icon" type="image/png" href="<%= vite_asset_path('images/favicon.png') %>">
 
-    <!--Inertia -->
-    <%= javascript_include_tag "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll,NodeList.prototype.forEach,Promise,Object.values,Object.assign", defer: true %>
-
-    <!-- PingCRM -->
-    <%= javascript_include_tag "https://polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith", defer: true %>
-
-    <%= vite_javascript_tag 'application', defer: true %>
+    <%= vite_javascript_tag 'application' %>
   </head>
 
   <body class="font-sans leading-none text-gray-800 antialiased">

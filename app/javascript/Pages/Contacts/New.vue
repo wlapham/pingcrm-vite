@@ -48,7 +48,7 @@ export default {
     },
   },
   remember: 'form',
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         contact: {},

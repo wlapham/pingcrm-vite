@@ -29,7 +29,7 @@ export default {
   props: {
     id: {
       type: String,
-      default() {
+      default () {
         return `textarea-input-${this._uid}`
       },
     },
@@ -47,10 +47,10 @@ export default {
     },
   },
   methods: {
-    focus() {
+    focus () {
       this.$refs.input.focus()
     },
-    select() {
+    select () {
       this.$refs.input.select()
     },
   },

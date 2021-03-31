@@ -49,12 +49,12 @@
 <script>
 import Layout from '@/Layouts/Main.vue'
 import LoadingButton from '@/Shared/LoadingButton.vue'
-import ContactForm from './Form.vue'
 import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import _ from 'lodash'
+import ContactForm from './Form.vue'
 
 export default {
-  metaInfo() {
+  metaInfo () {
     return {
       title: `${this.form.contact.first_name} ${this.form.contact.last_name}`,
     }
@@ -76,7 +76,7 @@ export default {
     },
   },
   remember: 'form',
-  data() {
+  data () {
     return {
       form: this.$inertia.form({
         contact: _.omit(this.contact, 'id', 'deleted_at'),
@@ -84,15 +84,13 @@ export default {
     }
   },
   methods: {
-    destroy() {
-      if (confirm('Are you sure you want to delete this contact?')) {
+    destroy () {
+      if (confirm('Are you sure you want to delete this contact?'))
         this.$api.contacts.destroy(this.contact)
-      }
     },
-    restore() {
-      if (confirm('Are you sure you want to restore this contact?')) {
+    restore () {
+      if (confirm('Are you sure you want to restore this contact?'))
         this.$api.contacts.restore(this.contact)
-      }
     },
   },
 }

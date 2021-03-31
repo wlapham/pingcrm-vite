@@ -5,7 +5,7 @@
         class="px-4 md:px-6 rounded-l border-r hover:bg-gray-100 focus:border-white focus:z-10"
         placement="bottom-start"
         aria-label="Filter"
-        :auto-close="false"
+        :autoClose="false"
       >
         <div class="flex items-baseline">
           <span class="text-gray-800 hidden md:inline">Filter</span>
@@ -14,7 +14,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 961.243 599.998"
           >
-            <path d="M239.998 239.999L0 0h961.243L721.246 240c-131.999 132-240.28 240-240.624 239.999-.345-.001-108.625-108.001-240.624-240z" />
+            <path d="M239.998 239.999L0 0h961.243L721.246 240c-131.999 132-240.28 240-240.624 239.999-.345-.001-108.625-108.001-240.624-240z"/>
           </svg>
         </div>
         <div
@@ -22,7 +22,7 @@
           class="mt-2 px-4 py-6 w-screen shadow-xl bg-white rounded"
           :style="{ maxWidth: `${maxWidth}px` }"
         >
-          <slot />
+          <slot/>
         </div>
       </dropdown>
       <input

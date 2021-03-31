@@ -21,7 +21,7 @@ export default {
     },
   },
   computed: {
-    title() {
+    title () {
       return {
         403: '403: Forbidden',
         404: '404: Page Not Found',
@@ -29,7 +29,7 @@ export default {
         503: '503: Service Unavailable',
       }[this.status]
     },
-    description() {
+    description () {
       return {
         403: 'Sorry, you are forbidden from accessing this page.',
         404: 'Sorry, the page you are looking for could not be found.',

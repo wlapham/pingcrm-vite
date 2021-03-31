@@ -18,7 +18,7 @@
           v-model="form.trashed"
           class="mt-1 w-full form-select"
         >
-          <option :value="null" />
+          <option :value="null"/>
           <option value="with">
             With Trashed
           </option>
@@ -133,7 +133,7 @@
         </tbody>
       </table>
     </div>
-    <pagination :meta="contacts.meta" />
+    <pagination :meta="contacts.meta"/>
   </div>
 </template>
 
@@ -166,7 +166,7 @@ export default {
       required: true,
     },
   },
-  data() {
+  data () {
     return {
       form: {
         search: this.filters.search,
@@ -176,7 +176,7 @@ export default {
   },
   watch: {
     form: {
-      handler: throttle(function() {
+      handler: throttle(function () {
         const query = pickBy(this.form)
         ContactsApi.list({
           query: Object.keys(query).length ? query : { remember: 'forget' },
@@ -193,7 +193,7 @@ export default {
     pathToEdit (contact) {
       return ContactsApi.edit.path(contact)
     },
-    reset() {
+    reset () {
       this.form = mapValues(this.form, () => null)
     },
   },

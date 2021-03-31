@@ -1,0 +1,15 @@
+defaults: &defaults
+  repo:
+    url: "https://github.com/ElMassimo/pingcrm-vite"
+  release: &deploy_defaults
+    commit: <%= Env.require('HEROKU_SLUG_COMMIT', 'null').first(7) %>
+    created_at: "<%= Env.require('HEROKU_RELEASE_CREATED_AT', Time.current.to_s) %>"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

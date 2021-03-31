@@ -3,7 +3,7 @@
     type="button"
     @click="show = true"
   >
-    <slot />
+    <slot/>
     <portal
       v-if="show"
       to="dropdown"
@@ -18,7 +18,7 @@
           style="position: absolute; z-index: 99999;"
           @click.stop="show = autoClose ? false : true"
         >
-          <slot name="dropdown" />
+          <slot name="dropdown"/>
         </div>
       </div>
     </portal>
@@ -43,13 +43,13 @@ export default {
       default: true,
     },
   },
-  data() {
+  data () {
     return {
       show: false,
     }
   },
   watch: {
-    show(show) {
+    show (show) {
       if (show) {
         this.$nextTick(() => {
           this.popper = createPopper(this.$el, this.$refs.dropdown, {
@@ -64,16 +64,16 @@ export default {
             ],
           })
         })
-      } else if (this.popper) {
+      }
+      else if (this.popper) {
         setTimeout(() => this.popper.destroy(), 100)
       }
     },
   },
-  mounted() {
-    document.addEventListener('keydown', e => {
-      if (e.keyCode === 27) {
+  mounted () {
+    document.addEventListener('keydown', (e) => {
+      if (e.keyCode === 27)
         this.show = false
-      }
     })
   },
 }

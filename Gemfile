@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 2.7'
+ruby File.read(File.expand_path('.ruby-version', __dir__)).chomp
+
+gem 'better_settings'
 
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 6.1.0'
@@ -86,6 +88,7 @@ gem 'devise'
 
 # A fast JSON parser and serializer. (http://www.ohler.com/oj)
 gem 'oj'
+gem 'oj_serializers'
 
 # Simple authorization solution for Rails. (https://github.com/CanCanCommunity/cancancan)
 gem 'cancancan'

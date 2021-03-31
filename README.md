@@ -16,7 +16,7 @@
 [vite-plugin-full-reload]: https://github.com/ElMassimo/vite-plugin-full-reload
 [webpacker]: https://github.com/rails/webpacker
 [vite]: http://vitejs.dev/
-[Windi CSS]: http://windicss.netlify.app/
+[Windi CSS]: https://windicss.org/
 
 Unlike the [original demo], this replaces [webpacker] with [Vite Rails],
 which provides a substantially faster development experience.
@@ -76,7 +76,7 @@ rails test:system
 
 ## Requirements
 
-- Ruby 2.7
+- Ruby 3.0
 - Ruby on Rails 6
 - PostgreSQL
 

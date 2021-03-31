@@ -70,28 +70,23 @@ export default {
     },
   },
   watch: {
-    value(value) {
-      if (!value) {
+    value (value) {
+      if (!value)
         this.$refs.file.value = ''
-      }
     },
   },
   methods: {
-    filesize(size) {
+    filesize (size) {
       const i = Math.floor(Math.log(size) / Math.log(1024))
-      return (
-        (size / Math.pow(1024, i)).toFixed(2) * 1 +
-        ' ' +
-        ['B', 'kB', 'MB', 'GB', 'TB'][i]
-      )
+      return `${(size / Math.pow(1024, i)).toFixed(2)} ${['B', 'kB', 'MB', 'GB', 'TB'][i]}`
     },
-    browse() {
+    browse () {
       this.$refs.file.click()
     },
-    change(e) {
+    change (e) {
       this.$emit('input', e.target.files[0])
     },
-    remove() {
+    remove () {
       this.$emit('input', null)
     },
   },

@@ -30,7 +30,7 @@ export default {
   props: {
     id: {
       type: String,
-      default() {
+      default () {
         return `text-input-${this._uid}`
       },
     },
@@ -52,13 +52,13 @@ export default {
     },
   },
   methods: {
-    focus() {
+    focus () {
       this.$refs.input.focus()
     },
-    select() {
+    select () {
       this.$refs.input.select()
     },
-    setSelectionRange(start, end) {
+    setSelectionRange (start, end) {
       this.$refs.input.setSelectionRange(start, end)
     },
   },

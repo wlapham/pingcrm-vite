@@ -1,7 +1,6 @@
 const environment = {
   plugins: [
     require('postcss-nested'),
-    require('autoprefixer'),
   ],
 }
 
