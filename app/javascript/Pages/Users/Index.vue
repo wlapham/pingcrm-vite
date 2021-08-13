@@ -49,8 +49,7 @@
         class="btn-indigo"
         :href="$api.users.new.path()"
       >
-        <span>Create</span>
-        <span class="hidden md:inline">User</span>
+        Create <span class="hidden md:inline">User</span>
       </inertia-link>
     </div>
     <div class="bg-white rounded shadow overflow-x-auto">

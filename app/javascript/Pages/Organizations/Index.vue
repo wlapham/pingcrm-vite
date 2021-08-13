@@ -32,8 +32,7 @@
         class="btn-indigo"
         @click="modalNew = true"
       >
-        <span>Create</span>
-        <span class="hidden md:inline">Organization</span>
+        Create <span class="hidden md:inline">Organization</span>
       </button>
       <modal
         :open="modalNew"

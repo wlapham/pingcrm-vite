@@ -31,8 +31,7 @@
         class="btn-indigo"
         :href="$api.contacts.new.path()"
       >
-        <span>Create</span>
-        <span class="hidden md:inline">Contact</span>
+        Create <span class="hidden md:inline">Contact</span>
       </inertia-link>
     </div>
     <div class="bg-white rounded shadow overflow-x-auto">

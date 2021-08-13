@@ -21,8 +21,6 @@ Rails.application.routes.draw do
       put :restore, on: :member
     end
 
-    get '/error-500' => 'dashboard#example_exception'
-
     root 'dashboard#index'
   end
 end

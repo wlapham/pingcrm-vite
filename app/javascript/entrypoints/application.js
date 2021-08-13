@@ -2,7 +2,8 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
-import 'windi.css'
+import 'virtual:windi.css'
+import 'virtual:windi-devtools'
 import '~/styles/application.css'
 
 import Vue from 'vue'
@@ -14,30 +15,34 @@ import PortalVue from 'portal-vue'
 
 import ConstantsMixin from '@/utils/ConstantsMixin'
 
-import { app, plugin } from '@inertiajs/inertia-vue'
-import { InertiaProgress as progress } from '@inertiajs/progress'
-Vue.use(VueMeta)
+import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue'
+import { InertiaProgress } from '@inertiajs/progress'
+
+Vue.component('InertiaHead', Head)
+Vue.component('InertiaLink', Link)
+InertiaProgress.init()
 
 Vue.prototype.$api = api
 Vue.use(PortalVue)
+Vue.use(VueMeta)
 Vue.mixin(ConstantsMixin)
 
-Vue.use(plugin)
-progress.init()
-
-const el = document.getElementById('app')
-const initialPage = JSON.parse(el.dataset.page)
-
 const pages = import.meta.glob('../Pages/**/*.vue')
-const resolveComponent = (name) => {
+
+const resolve = (name) => {
   const importPage = pages[`../Pages/${name}.vue`]
   if (!importPage) throw new Error(`Unknown page ${name}. Is it located under Pages with a .vue extension?`)
   return importPage().then(module => module.default)
 }
 
-new Vue({
-  metaInfo: {
-    titleTemplate: title => title ? `${title} - PingCRM` : 'PingCRM',
+createInertiaApp({
+  resolve,
+  setup ({ el, app, props }) {
+    new Vue({
+      metaInfo: {
+        titleTemplate: title => title ? `${title} - PingCRM on Vite Ruby` : 'PingCRM on Vite Ruby',
+      },
+      render: h => h(app, props),
+    }).$mount(el)
   },
-  render: h => h(app, { props: { initialPage, resolveComponent } }),
-}).$mount(el)
+})

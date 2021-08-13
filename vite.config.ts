@@ -11,12 +11,6 @@ export default defineConfig({
     ReloadOnChange(['config/routes.rb', 'app/views/**/*']),
     RubyPlugin(),
     Vue2Plugin(),
-    WindiCSS({
-      root: process.cwd(),
-      scan: {
-        fileExtensions: ['erb', 'html', 'vue', 'rb', 'jsx', 'tsx'],
-        dirs: ['app/views', 'app/helpers', 'app/javascript'],
-      },
-    }),
+    WindiCSS({ root: process.cwd() }),
   ],
 })

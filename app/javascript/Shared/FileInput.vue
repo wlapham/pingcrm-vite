@@ -5,7 +5,7 @@
       class="form-label"
     >{{ label }}:</label>
     <div
-      class="form-input p-0"
+      class="form-input !p-0"
       :class="{ error: errors.length }"
     >
       <input
