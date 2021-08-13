@@ -25,7 +25,7 @@ gem 'image_processing', '~> 1.10'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Provides integration to manage frontend assets with Vite.js (https://github.com/ElMassimo/vite_ruby)
-gem 'vite_rails'
+gem 'vite_rails', '~> 3.0.0.beta.1'
 
 # Allows to register per-request thread-safe variables (https://github.com/ElMassimo/request_store_rails)
 gem 'request_store_rails'
