@@ -3665,10 +3665,10 @@ vite-plugin-full-reload@^0.2.2:
     chalk "^4.1"
     picomatch "^2.2.2"
 
-vite-plugin-ruby@^3.0.0-beta.2:
-  version "3.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.0.0-beta.2.tgz#571da2ca98544e55ab2a78b9af86aff4466a70d7"
-  integrity sha512-/EXMxbP/u08TId7Po+p0ef7qOnuGR8qhgrcPEBXrmsp0IUyR/Yq8YqnV/e/JqoFQk7V+GnKCA8/1UKqv9nZ3MA==
+vite-plugin-ruby@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.0.0.tgz#30e81a3ea135e4553bddcf5a41ece3a326677bd6"
+  integrity sha512-Jrb+H6n72el+uJQM7o6THK4SpBId4719U7r/2+3burYR4WCUAmlUhZaYSP1Xnb8kc+JU2ojkvjnMZS07u0dM5A==
   dependencies:
     debug "^4.3.1"
     fast-glob "^3.2.4"
@@ -3710,10 +3710,10 @@ vite-plugin-windicss@^1.2.7:
     debug "^4.3.2"
     windicss "^3.1.6"
 
-vite@^2.5.0-beta.2:
-  version "2.5.0-beta.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.5.0-beta.2.tgz#3b71eecb17b7e62869366a91e92bd26578bb4f7f"
-  integrity sha512-PgPOlTg7w6VGDx1HCUHfDoXeQ6cWKCO2tHz3om27VLjfu/92T1kyhuJf/VM6sa+orPOkTLUZWaHI9bPQjgtLrA==
+vite@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.5.0.tgz#111ba3679432d426e44566acf480005a7914cbd6"
+  integrity sha512-Dn4B+g54PJsMG5WCc4QeFy1ygMXRdTtFrUPegqfk4+vzVQcbF/DqqmI/1bxezArzbujBJg/67QeT5wz8edfJVQ==
   dependencies:
     esbuild "^0.12.17"
     postcss "^8.3.6"
