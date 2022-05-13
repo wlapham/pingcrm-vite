@@ -85,10 +85,10 @@
 # Metadata extra: Provides the pagination metadata to Javascript frameworks like Vue.js, react.js, etc.
 # See https://ddnexus.github.io/pagy/extras/metadata
 # you must require the shared internal extra (BEFORE the metadata extra) ONLY if you need also the :sequels
-require 'pagy/extras/shared'
+require 'pagy/extras/frontend_helpers'
 require 'pagy/extras/metadata'
 # For performance reason, you should explicitly set ONLY the metadata you use in the frontend
-Pagy::VARS[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :sequels]
+Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :sequels]
 
 # Trim extra: Remove the page=1 param from links
 # See https://ddnexus.github.io/pagy/extras/trim
@@ -102,7 +102,7 @@ Pagy::VARS[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :seq
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
 # Pagy::VARS[:items] = 20                                   # default
-Pagy::VARS[:items] = 10
+Pagy::DEFAULT[:items] = 10
 
 # Other Variables
 # See https://ddnexus.github.io/pagy/api/pagy#other-variables

@@ -7,7 +7,7 @@ ruby File.read(File.expand_path('.ruby-version', __dir__)).chomp
 gem 'better_settings'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 7.0'
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
@@ -55,13 +55,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
 
   # Listen to file modifications (https://github.com/guard/listen)
-  gem 'listen', '~> 3.3'
-
-  # Rails application preloader (https://github.com/rails/spring)
-  gem 'spring'
-
-  # Makes spring watch files using the listen gem. (https://github.com/jonleighton/spring-watcher-listen)
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'listen', '~> 3'
 
   # Brings Rails named routes to modern javascript (https://github.com/elmassimo/js_from_routes)
   gem 'js_from_routes', '~> 2.0.4'

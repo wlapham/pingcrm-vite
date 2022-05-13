@@ -14,7 +14,8 @@ class ActiveSupport::TestCase
   teardown do
     messages = page.driver.browser.manage.logs.get(:browser).
                map { |log| "[#{log.level}] #{log.message}" }.
-               reject { |msg| msg.include?('Please use the new visit event callbacks instead') }
+               reject { |msg| msg.include?('Please use the new visit event callbacks instead') || msg.include?('1038223') }
+
 
     assert_empty(messages)
   end
