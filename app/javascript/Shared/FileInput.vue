@@ -55,7 +55,7 @@
 <script>
 export default {
   props: {
-    value: File,
+    value: {}, // eslint-disable-line
     label: {
       type: String,
       default: null,
