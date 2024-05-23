@@ -7,7 +7,7 @@ ruby File.read(File.expand_path('.ruby-version', __dir__)).chomp
 gem 'better_settings'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.0.5'
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
@@ -67,9 +67,6 @@ group :test do
 
   # The next generation developer focused tool for automated testing of webapps (https://github.com/SeleniumHQ/selenium)
   gem 'selenium-webdriver'
-
-  # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
-  gem 'webdrivers'
 end
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
